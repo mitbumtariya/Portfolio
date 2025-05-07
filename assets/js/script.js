@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const image = document.querySelector(".abs-img");
 
@@ -75,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const aboutContent = document.querySelector(".about-content");
 
@@ -83,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          aboutContent.classList.add("visible");
+          aboutContent.classList.add("visible-1");
           observer.unobserve(entry.target);
         }
       });
@@ -98,7 +95,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutContent = document.querySelector(".about-content-1");
 
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutContent.classList.add("visible-2");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  if (aboutContent) {
+    observer.observe(aboutContent);
+  }
+});
+
+document.getElementById("viewAllBtn").addEventListener("click", function () {
+  const hiddenSection = document.getElementById("more-certificates");
+  if (hiddenSection.style.display === "none") {
+    hiddenSection.style.display = "block";
+    this.textContent = "Show Less";
+  } else {
+    hiddenSection.style.display = "none";
+    this.textContent = "View All";
+  }
+});
 
 /**
  * back to top & header

@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2025 mitbumtariya
  */
 
 /*-----------------------------------*\
@@ -207,6 +207,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Ensure container background is transparent */
+  display: block; /* Avoids extra space below image */
 }
 
 .section {
@@ -343,7 +350,7 @@ body {
 .hero-banner {
   width: 150px;
   height: 172px;
-  background-color: var(--independence);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-10);
   margin-inline: auto;
   margin-block-end: 30px;
@@ -356,6 +363,7 @@ body {
 .hero-content {
   text-align: center;
   color: var(--white);
+  margin-bottom: 5px;
 }
 
 .hero-title {
@@ -403,9 +411,9 @@ body {
   margin-block-end: 30px;
 }
 
-.about-banner > .img-cover {
+/* .about-banner > .img-cover {
   border-radius: inherit;
-}
+} */
 
 .about :is(.section-title, .section-subtitle, .section-text) {
   text-align: left;
@@ -670,7 +678,7 @@ textarea.contact-input {
 }
 
 .blog-card .card-tag {
-  color: var(--orange-soda);
+  color: white;
   margin-block-end: 5px;
 }
 
@@ -986,6 +994,36 @@ textarea.contact-input {
     animation: rotate360 15s linear infinite reverse;
   }
 
+  .about-social {
+    display: flex;
+    place-items: left;
+    justify-content: center;
+    gap: 12px;
+    margin-right: 845px;
+    margin-top: 90px;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    /* background-color: #000; */
+    background-color: var(--space-cadet);
+    border: 2px solid #0e76a8; /* LinkedIn blue */
+    border-radius: 50%;
+    color: #0e76a8;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+  }
+
+  .social-link:hover {
+    background-color: #0e76a8;
+    color: #ffffff;
+  }
+
   @keyframes rotate360 {
     0% {
       transform: rotate(0);
@@ -993,6 +1031,17 @@ textarea.contact-input {
     100% {
       transform: rotate(1turn);
     }
+  }
+
+    .hidden-left {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  }
+
+  .hidden-left.visible-2 {
+    transform: translateX(0);
+    opacity: 1;
   }
 
   /**
@@ -1029,21 +1078,20 @@ textarea.contact-input {
   }
 
   .shrink-hover {
-  transition: transform 1s ease;
-}
+    transition: transform 1s ease;
+  }
 
-.shrink-hover:hover {
-  transform: scale(0.80); /* Adjust scale as needed */
-}
+  .shrink-hover:hover {
+    transform: scale(0.8); /* Adjust scale as needed */
+  }
 
   .shrink-hover1 {
-  transition: transform 1s ease-in;
-}
+    transition: transform 1s ease-in;
+  }
 
-
-.shrink1-hover:hover {
-  transform: scale(0.50); /* Adjust scale as needed */
-}
+  .shrink1-hover:hover {
+    transform: scale(0.5); /* Adjust scale as needed */
+  }
 
   .abs-img {
     width: 250px;
@@ -1063,18 +1111,16 @@ textarea.contact-input {
     opacity: 1;
   }
 
-.hidden-right {
-  opacity: 0;
-  transform: translateX(200px);
-  transition: transform 1s ease-out, opacity 1s ease-out;
-}
+  .hidden-right {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
 
-.hidden-right.visible {
-  transform: translateX(0);
-  opacity: 1;
-}
-
- 
+  .hidden-right.visible-1 {
+    transform: translateX(0);
+    opacity: 1;
+  }
 
   .abs-icon {
     font-size: 5rem;
@@ -1232,10 +1278,18 @@ textarea.contact-input {
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 60px;
   max-width: 900px;
   margin: 0 auto;
 }
+
+  .shrink-hover3 {
+    transition: transform 1s ease;
+  }
+
+  .shrink-hover3:hover {
+    transform: scale(1.2); /* Adjust scale as needed */
+  }
 
 .card h2 {
   font-size: 2em;
@@ -1274,11 +1328,34 @@ textarea.contact-input {
   margin-bottom: 5px;
 }
 
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 35px; /* Adjust spacing between buttons if needed */
+  justify-content: center;
+}
+
 .github-btn {
   display: inline-block;
   background: white;
   color: black;
-  padding: 10px 20px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.github-btn1 {
+  background: white;
+  color: black;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding: 5px 10px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -1286,5 +1363,9 @@ textarea.contact-input {
 }
 
 .github-btn:hover {
-  background: #ccc;
+  background: #a09f9f;
+}
+
+.github-btn1:hover {
+  background: #a09f9f;
 }
