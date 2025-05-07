@@ -26,12 +26,79 @@ for (let i = 0; i < navbarLinks.length; i++) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const bars = document.querySelectorAll(".progress-fill");
-  bars.forEach((bar) => {
-    const percent = bar.getAttribute("data-percentage");
-    bar.style.width = percent + "%";
-  });
+  const bars = document.querySelectorAll(".progress-fill  ");
+  const section = document.querySelector(".progress-bar"); // adjust this selector to match your section
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          bars.forEach((bar) => {
+            const percent = bar.getAttribute("data-percentage");
+            bar.style.width = percent + "%";
+          });
+          observer.unobserve(entry.target); // Optional: run only once
+        }
+      });
+    },
+    {
+      threshold: 0.3, // adjust visibility threshold
+    }
+  );
+
+  if (section) {
+    observer.observe(section);
+  }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const image = document.querySelector(".abs-img");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          image.classList.add("visible");
+          observer.unobserve(entry.target); // Remove if you want it to trigger only once
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Adjust depending on when you want it to trigger
+    }
+  );
+
+  if (image) {
+    observer.observe(image);
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutContent = document.querySelector(".about-content");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutContent.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  if (aboutContent) {
+    observer.observe(aboutContent);
+  }
+});
+
+
 
 /**
  * back to top & header
