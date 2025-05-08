@@ -128,6 +128,11 @@ document.getElementById("viewAllBtn").addEventListener("click", function () {
   }
 });
 
+AOS.init({
+  duration: 1000,
+  once: true,
+});
+
 /**
  * back to top & header
  */

@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <title> Mit Bumtariya - Software Developer </title>
 
@@ -114,12 +117,12 @@
 
         <div class="about-social">
 
-          <a href="https://www.linkedin.com/in/mit-bumtariya-12m01i2004t" target="_blank" class="social-link">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-
           <a href="https://github.com/mitbumtariya" target="_blank" class="social-link">
             <ion-icon name="logo-github"></ion-icon>
+          </a>
+
+          <a href="https://www.linkedin.com/in/mit-bumtariya-12m01i2004t" target="_blank" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
           </a>
 
           <a href="https://x.com/meetbumtariya12" target="_blank" class="social-link">
@@ -355,39 +358,40 @@
             applications. I enjoy
             solving real-world problems through clean code, efficient architecture, and user-focused design.
           </p>
-          <ul>
-
-            <li class="education-item, container1">
-              <h3 class="h3 education-title">Web Developer Intern</h3>
-
-              <p class="education-subtitle">Eons Soft Tech</p>
-
-              <time datetime="2020-2024" class="education-time">Jan 2025 - Present </time>
+          <ul class="education-list">
+            <li class="education-item" data-aos="fade-right">
+              <div class="content">
+                <h3 class="h3 education-title">Web Developer Intern</h3>
+                <p class="education-subtitle">Eons Soft Tech</p>
+                <time class="education-time">Jan 2025 - Present</time>
+              </div>
             </li>
 
-            <li class="education-item, container1">
-              <h3 class="h3 education-title">Bachelor of Technology Computer Engineer</h3>
-
-              <p class="education-subtitle">RK University</p>
-
-              <time datetime="2020-2024" class="education-time">2021 - 2025</time>
+            <li class="education-item" data-aos="fade-left">
+              <div class="content">
+                <h3 class="h3 education-title">Bachelor of Technology Computer Engineer</h3>
+                <p class="education-subtitle">RK University</p>
+                <time class="education-time">2021 - 2025</time>
+              </div>
             </li>
 
-            <li class="education-item, container1">
-              <h3 class="h3 education-title">Higher Secondary School</h3>
-
-              <p class="education-subtitle">Shree V. P. Ghetia Madhyamik Shala</p>
-
-              <time datetime="2018-2020" class="education-time">2017 - 2021</time>
+            <li class="education-item" data-aos="fade-right">
+              <div class="content">
+                <h3 class="h3 education-title">Higher Secondary School</h3>
+                <p class="education-subtitle">Shree V. P. Ghetia Madhyamik Shala</p>
+                <time class="education-time">2017 - 2021</time>
+              </div>
             </li>
-            <li class="education-item, container1">
-              <h3 class="h3 education-title">Secondary School</h3>
 
-              <p class="education-subtitle">Sunrise English School</p>
-
-              <time datetime="2017-2018" class="education-time">2015 - 2017</time>
+            <li class="education-item" data-aos="fade-left">
+              <div class="content">
+                <h3 class="h3 education-title">Secondary School</h3>
+                <p class="education-subtitle">Sunrise English School</p>
+                <time class="education-time">2015 - 2017</time>
+              </div>
             </li>
           </ul>
+
         </div>
       </section>
 
@@ -514,12 +518,12 @@
 
                 <figure class="card-banner">
                   <a href="#">
-                    <img src="./assets/images/HTML5.png" width="1181" height="843" loading="lazy"
+                    <img src="./assets/images/cert-1.png" width="1181" height="843" loading="lazy"
                       alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
                   </a>
                 </figure>
 
-                <a href="#" class="card-tag">HTML5</a>
+                <a href="#" class="card-tag">Git Essentials Workshop</a>
 
                 <!-- <h3 class="card-title">
                   <a href="#">Manage guests with ease, from check-in to check-out, all in one simple system.</a>
@@ -533,12 +537,12 @@
 
                 <figure class="card-banner">
                   <a href="#">
-                    <img src="./assets/images/CSS3.png" width="1181" height="843" loading="lazy"
+                    <img src="./assets/images/cert-2.jpg" width="1181" height="843" loading="lazy"
                       alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
                   </a>
                 </figure>
 
-                <a href="#" class="card-tag">CSS3</a>
+                <a href="#" class="card-tag">Technoplanet 2023</a>
 
                 <!-- <h3 class="card-title">
                   <a href="#">Rent, return, and explore books—Librasphere makes reading easy and smart.
@@ -553,12 +557,12 @@
 
                 <figure class="card-banner">
                   <a href="#">
-                    <img src="./assets/images/JavaScript.png" width="1181" height="843" loading="lazy"
+                    <img src="./assets/images/cert-3.jpg" width="1181" height="843" loading="lazy"
                       alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
                   </a>
                 </figure>
 
-                <a href="#" class="card-tag">JavaScript</a>
+                <a href="#" class="card-tag">IoT HackFest</a>
 
                 <!-- <h3 class="card-title">
                   <a href="#">Code with purpose, design with clarity—welcome to my creative space.</a>
@@ -569,6 +573,7 @@
 
             <li>
               <div class="blog-card">
+
 
                 <figure class="card-banner">
                   <a href="#">
@@ -612,44 +617,139 @@
 
               </div>
             </li>
-
-
-            <!-- Hidden certificates -->
-            <div id="more-certificates" style="display: none;">
-              <li>
-                <div class="blog-card">
-
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img src="./assets/images/cer-3.png" width="1181" height="843" loading="lazy"
-                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
-                    </a>
-                  </figure>
-
-                  <a href="#" class="card-tag">PCAP:Programming Essentials in Python</a>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="blog-card">
-
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img src="./assets/images/cer-3.png" width="1181" height="843" loading="lazy"
-                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
-                    </a>
-                  </figure>
-
-                  <a href="#" class="card-tag">PCAP:Programming Essentials in Python</a>
-
-                </div>
-              </li>
-              <!-- Add more as needed -->
-            </div>
-
-
           </ul>
+
+          <br>
+          <!-- Hidden certificates -->
+          <div id="more-certificates" style="display: none;">
+            <ul class="blog-list">
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/cert-4.jpg" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover"
+                        style="height: 227px;">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Studetn Start-up and Innovation Policy</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/HTML5.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">HTML5</a>
+
+                  <!-- <h3 class="card-title">
+                                  <a href="#">Manage guests with ease, from check-in to check-out, all in one simple system.</a>
+                                </h3> -->
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/CSS3.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">CSS3</a>
+
+                  <!-- <h3 class="card-title">
+                                  <a href="#">Rent, return, and explore books—Librasphere makes reading easy and smart.
+                                  </a>
+                                </h3> -->
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/JavaScript.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">JavaScript</a>
+
+                  <!-- <h3 class="card-title">
+                                  <a href="#">Code with purpose, design with clarity—welcome to my creative space.</a>
+                                </h3> -->
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/cert-5.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover"
+                        style="height: 227px;">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Java Language Features</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/cert-6.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover"
+                        style="height: 227px;">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Java Programming Fundamentals</a>
+
+                </div>
+              </li>
+
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/cert-7.png" width="1181" height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light" class="img-cover"
+                        style="height: 227px;">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Java SE 8 Features</a>
+
+                </div>
+              </li>
+            </ul>
+            <!-- Add more as needed -->
+          </div>
+
 
           <div class="btn-group" style="display: flex; justify-content: center; margin-top: 50px;">
             <a href="javascript:void(0);" id="viewAllBtn" class="btn btn-primary blue">View All</a>
@@ -761,17 +861,7 @@
       <p class="copyright">
         &copy; 2025 <a href="#" class="copyright-link">mitbumtariya</a>. All Rights Reseverd
       </p>
-
-      <ul class="footer-list">
-        <li>
-          <a href="#" class="footer-link">Terms & Condition</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Privacy Policy</a>
-        </li>
-      </ul>
-
+      
     </div>
   </footer>
 
