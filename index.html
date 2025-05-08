@@ -14,7 +14,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo-removebg-preview.png" type="image/x-icon">
 
   <!-- 
     - custom css link
@@ -776,14 +776,18 @@
 
             <div class="wrapper">
 
-              <form action="" class="contact-form">
+              <form action="https://formsubmit.co/mittech12@gmail.com" method="POST" class="contact-form">
 
                 <input type="text" name="name" placeholder="Name" required class="contact-input">
 
                 <input type="email" name="email" placeholder="Email" required class="contact-input">
 
                 <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+                
+                <input type="hidden" name="_subject" value="New submission!">
 
+                <input type="hidden" name="_next" value="https://mitbumtariya.vercel.app//thanks.html">
+                  
                 <button type="submit" class="btn-submit">Submit Message</button>
 
               </form>
@@ -861,7 +865,7 @@
       <p class="copyright">
         &copy; 2025 <a href="#" class="copyright-link">mitbumtariya</a>. All Rights Reseverd
       </p>
-      
+
     </div>
   </footer>
 
