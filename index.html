@@ -8,7 +8,18 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
-
+  <script src="tilt.jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.card').tilt({
+        scale: 1.05,
+        speed: 400,
+        maxTilt: 10,
+        glare: true,
+        maxGlare: 0.5
+      });
+    });
+  </script>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
@@ -135,9 +146,9 @@
 
 
         <div class="about-social">
-          <a href="https://x.com/meetbumtariya12" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://github.com/mitbumtariya" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.linkedin.com/in/mit-bumtariya-12m01i2004t" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/mitbumtariya" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mit-bumtariya-12m01i2004t" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/meetbumtariya12" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
 
 
@@ -145,8 +156,14 @@
 
           <div class="hero-banner">
 
+            <span data-tilt
+              data-tilt-max="10"
+              data-tilt-speed="400"
+              data-tilt-perspective="1000"
+              data-tilt-glare="true"
+              data-tilt-max-glare="0.5">
             <img src="./assets/images/Profile.png" width="800" height="864" loading="lazy" alt="Mit's Photo"
-              class="img-cover">
+              class="img-cover card"></span>
 
             <!-- <div class="elem elem-1">
               <p class="elem-title">12</p>
